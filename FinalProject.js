@@ -21,7 +21,7 @@ var drawgraph= function(teams){
 
 var screen={width:800, height:400}
 
-var margins={top:75, bottom:100, left:90, right:100,}
+var margins={top:75, bottom:100, left:100, right:100,}
 var graph={width:screen.width-margins.left-margins.right}
 
 var rect= svg.selectAll("rect")
@@ -44,7 +44,7 @@ var yScale= d3.scaleOrdinal()
     .domain(["mval","championships"])
     .range(1)}
 
-var createaxes= function(screen,margins,graph,xScale, yScale){
+var createaxes= function(xScale, yScale){
     var xAxis=d3.axisTop(xScale)
     var yAxis=d3.axisLeft(yScale)
     
@@ -59,6 +59,7 @@ var createaxes= function(screen,margins,graph,xScale, yScale){
         axes.append("g")
     .call(xAxis)
 }
+
 
 
 //var initgraph= function(){}
